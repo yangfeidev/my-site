@@ -3,88 +3,253 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bsdnme.me</title>
+    <title>bsdnme · 全栈开发者</title>
     <meta
       name="description"
-      content="bsdnme.me 的个人主页，展示简介、正在做的事，以及后续扩展博客与项目页的入口。"
+      content="bsdnme 的个人主页。全栈开发者，专注 Cloudflare Workers、TypeScript 与静态站点。这里是我的简介、正在做的事和联系方式。"
     />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Social / sharing -->
+    <meta property="og:title" content="bsdnme · 全栈开发者" />
+    <meta
+      property="og:description"
+      content="全栈开发者，专注 Cloudflare Workers、TypeScript 与静态站点。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238ab4ff'/%3E%3Cstop offset='1' stop-color='%236e9bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Ctext x='32' y='43' font-size='34' font-weight='700' text-anchor='middle' fill='url(%23g)' font-family='-apple-system, Segoe UI, sans-serif'%3Eb%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <div class="page-shell">
-      <header class="hero">
-        <p class="eyebrow">Hello, this is</p>
-        <h1>bsdnme.me</h1>
-        <p class="intro">
-          一个最简单的个人首页起点。这里先放你的个人介绍、正在做的事和联系方式，后续可以继续扩展成博客、项目集和留言页。
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="mailto:hello@bsdnme.me">联系我</a>
-          <a class="button secondary" href="#roadmap">查看后续规划</a>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark" aria-hidden="true">b</span>
+          <span class="brand-name">bsdnme</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="打开导航"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="nav-menu" aria-label="主导航">
+          <a href="#about">关于</a>
+          <a href="#stack">技术栈</a>
+          <a href="#now">近况</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===== Hero ===== -->
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <p class="eyebrow reveal">Hello, I'm</p>
+          <h1 class="reveal">bsdnme</h1>
+          <p class="intro reveal">
+            一名全栈开发者，专注让复杂系统变得简单、可靠、可维护。日常写
+            TypeScript，把想法放在 Cloudflare 上跑，也会做些开源和博客。
+          </p>
+
+          <p class="status reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            目前开放合作，正在接项目
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="button primary" href="mailto:hello@bsdnme.me">联系我</a>
+            <a class="button secondary" href="#stack">看看技术栈</a>
+          </div>
+
+          <ul class="meta-list reveal">
+            <li><span class="meta-label">坐标</span>中国 · 上海</li>
+            <li><span class="meta-label">方向</span>Web 基础设施</li>
+            <li><span class="meta-label">状态</span>远程 / 兼职合作</li>
+          </ul>
         </div>
-      </header>
 
-      <main>
-        <section class="card-grid">
-          <article class="card">
-            <h2>现在可以放什么</h2>
-            <p>
-              你的名字、一句话介绍、常用链接和一个清晰的联系方式。这一版先追求轻量、干净、能快速上线。
-            </p>
-          </article>
-          <article class="card">
-            <h2>后续怎么扩展</h2>
-            <p>
-              可以逐步增加博客、作品展示、项目归档、留言表单，甚至接入
-              Cloudflare Workers 做动态能力。
-            </p>
-          </article>
-          <article class="card">
-            <h2>为什么适合 Pages</h2>
-            <p>
-              这是一个纯静态站点，部署简单、访问快、自动 HTTPS，天然适合挂在
-              Cloudflare Pages 上。
-            </p>
-          </article>
-        </section>
-
-        <section class="panel" id="roadmap">
-          <div class="panel-header">
-            <p class="section-kicker">Roadmap</p>
-            <h2>下一步可以这样加内容</h2>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="step">01</span>
-              <div>
-                <h3>个人主页</h3>
-                <p>保留极简首页，介绍你是谁、你在做什么、怎么联系你。</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="step">02</span>
-              <div>
-                <h3>博客页</h3>
-                <p>后面可以接静态博客方案，把文章放到 `blog.bsdnme.me` 或站内路由。</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="step">03</span>
-              <div>
-                <h3>项目页</h3>
-                <p>按卡片形式展示你的作品、链接、截图和技术栈。</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="step">04</span>
-              <div>
-                <h3>留言表单</h3>
-                <p>后续可以接 `Cloudflare Workers` 或邮件服务处理留言提交。</p>
-              </div>
+        <aside class="hero-card reveal" aria-label="个人资料卡">
+          <div class="hero-card-head">
+            <span class="avatar" aria-hidden="true">B</span>
+            <div>
+              <p class="hero-card-name">bsdnme</p>
+              <p class="hero-card-role">Full-stack Developer</p>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+          <p class="hero-card-bio">
+            用最小的复杂度解决真实问题。偏好静态、快、好维护，讨厌没必要的炫技。
+          </p>
+          <div class="hero-card-tags">
+            <span>TypeScript</span>
+            <span>Cloudflare</span>
+            <span>Node.js</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== About ===== -->
+      <section class="section" id="about">
+        <header class="section-head reveal">
+          <p class="section-kicker">About</p>
+          <h2>用简单的方式，做可靠的东西</h2>
+          <p class="section-sub">
+            我从需求和成本出发，倾向于静态生成、边缘渲染和少量依赖，把复杂度留在该在的地方。
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              过去几年我主要做面向开发者的工具和站点：从技术博客、文档站，到带后端能力的
+              SaaS 应用。我喜欢把一件小事做到清晰，而不是把很多事做得模糊。
+            </p>
+            <p>
+              技术选型上，我偏爱可预测、可替换的部分——边缘函数、零配置部署、类型即文档。
+              如果你也这么想，我们大概率聊得来。
+            </p>
+          </div>
+
+          <ul class="fact-list reveal">
+            <li>
+              <span class="fact-title">当前专注</span>
+              Cloudflare Workers / 静态站点
+            </li>
+            <li>
+              <span class="fact-title">经验年限</span>
+              6 年 Web 开发
+            </li>
+            <li>
+              <span class="fact-title">工作方式</span>
+              以结果为导向，透明沟通
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== Stack ===== -->
+      <section class="section" id="stack">
+        <header class="section-head reveal">
+          <p class="section-kicker">Stack</p>
+          <h2>我常用的技术</h2>
+          <p class="section-sub">
+            这些是我手最熟、也最信任的工具。用它，意味着快、稳、少踩坑。
+          </p>
+        </header>
+
+        <div class="stack-cols">
+          <div class="stack-group reveal">
+            <h3>应用</h3>
+            <div class="pill-group">
+              <span class="pill">TypeScript</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">React</span>
+              <span class="pill">Vue</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <h3>平台</h3>
+            <div class="pill-group">
+              <span class="pill">Cloudflare Workers</span>
+              <span class="pill">Pages</span>
+              <span class="pill">KV / D1 / R2</span>
+              <span class="pill">Vercel</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <h3>工具</h3>
+            <div class="pill-group">
+              <span class="pill">Tailwind</span>
+              <span class="pill">SQLite</span>
+              <span class="pill">Git</span>
+              <span class="pill">Test</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Now ===== -->
+      <section class="section" id="now">
+        <header class="section-head reveal">
+          <p class="section-kicker">Now</p>
+          <h2>最近在做什么</h2>
+        </header>
+
+        <div class="now-grid">
+          <article class="now-card reveal">
+            <span class="now-icon" aria-hidden="true">✍️</span>
+            <h3>写博客</h3>
+            <p>下一篇想聊边缘渲染的取舍，以及为什么少用依赖反而更快。</p>
+          </article>
+          <article class="now-card reveal">
+            <span class="now-icon" aria-hidden="true">🧩</span>
+            <h3>开源</h3>
+            <p>在维护一个小型静态站点脚手架，内置基础性能与无障碍优化。</p>
+          </article>
+          <article class="now-card reveal">
+            <span class="now-icon" aria-hidden="true">🤝</span>
+            <h3>接项目</h3>
+            <p>开放技术博客、文档站、工具类 SaaS 的前端与边缘开发合作。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section class="section contact" id="contact">
+        <div class="contact-inner reveal">
+          <p class="section-kicker">Contact</p>
+          <h2>想聊聊？给我发封邮件</h2>
+          <p class="section-sub">
+            无论是技术项目、合作，还是单纯打个招呼，我都乐意回复。
+          </p>
+
+          <div class="contact-actions">
+            <a class="button primary large" href="mailto:hello@bsdnme.me">
+              hello@bsdnme.me
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/bsdnme" rel="me">GitHub</a>
+            <a href="https://x.com/bsdnme" rel="me">X</a>
+            <a href="mailto:hello@bsdnme.me">Email</a>
+            <a href="https://blog.bsdnme.me">Blog</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> bsdnme · 用简单的方式做可靠的东西</p>
+      <p class="footer-note">Built with ♥ on Cloudflare Pages</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

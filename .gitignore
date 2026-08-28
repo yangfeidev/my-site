@@ -6,3 +6,6 @@ DerivedData/
 xcuserdata/
 Pods/
 .build/
+.playwright-mcp/
+.DS_Store
+.wrangler/
