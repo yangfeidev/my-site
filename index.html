@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bsdnme.me</title>
+    <meta
+      name="description"
+      content="bsdnme.me 的个人主页，展示简介、正在做的事，以及后续扩展博客与项目页的入口。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Hello, this is</p>
+        <h1>bsdnme.me</h1>
+        <p class="intro">
+          一个最简单的个人首页起点。这里先放你的个人介绍、正在做的事和联系方式，后续可以继续扩展成博客、项目集和留言页。
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:hello@bsdnme.me">联系我</a>
+          <a class="button secondary" href="#roadmap">查看后续规划</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="card-grid">
+          <article class="card">
+            <h2>现在可以放什么</h2>
+            <p>
+              你的名字、一句话介绍、常用链接和一个清晰的联系方式。这一版先追求轻量、干净、能快速上线。
+            </p>
+          </article>
+          <article class="card">
+            <h2>后续怎么扩展</h2>
+            <p>
+              可以逐步增加博客、作品展示、项目归档、留言表单，甚至接入
+              Cloudflare Workers 做动态能力。
+            </p>
+          </article>
+          <article class="card">
+            <h2>为什么适合 Pages</h2>
+            <p>
+              这是一个纯静态站点，部署简单、访问快、自动 HTTPS，天然适合挂在
+              Cloudflare Pages 上。
+            </p>
+          </article>
+        </section>
+
+        <section class="panel" id="roadmap">
+          <div class="panel-header">
+            <p class="section-kicker">Roadmap</p>
+            <h2>下一步可以这样加内容</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="step">01</span>
+              <div>
+                <h3>个人主页</h3>
+                <p>保留极简首页，介绍你是谁、你在做什么、怎么联系你。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="step">02</span>
+              <div>
+                <h3>博客页</h3>
+                <p>后面可以接静态博客方案，把文章放到 `blog.bsdnme.me` 或站内路由。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="step">03</span>
+              <div>
+                <h3>项目页</h3>
+                <p>按卡片形式展示你的作品、链接、截图和技术栈。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="step">04</span>
+              <div>
+                <h3>留言表单</h3>
+                <p>后续可以接 `Cloudflare Workers` 或邮件服务处理留言提交。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

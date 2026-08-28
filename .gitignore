@@ -1,0 +1,8 @@
+.claude/
+.dbg/
+*.env
+DerivedData/
+*.xcworkspace
+xcuserdata/
+Pods/
+.build/
