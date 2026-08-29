@@ -27,6 +27,8 @@ python3 -m http.server 4173
 | `index.html` | 页面结构与内容 |
 | `styles.css` | 全部样式（含响应式与 `prefers-reduced-motion`） |
 | `script.js` | 渐进增强：移动端导航、滚动头部、区块显现、页脚年份 |
+| `deploy.sh` | 本地一键部署（走本机代理） |
+| `.env.deploy` | 本地部署凭证（**git 忽略，勿提交**） |
 
 ## 修改内容
 
@@ -36,22 +38,30 @@ python3 -m http.server 4173
 - 页脚年份会自动更新，无需手动改。
 - 配色：改 `styles.css` 顶部的 `:root` 变量（如 `--primary`、`--bg`）。
 
-## 部署到 Cloudflare Pages
+## 发布到 Cloudflare Pages
 
-如果你使用 Dashboard：
+### 首选：push 自动部署（GitHub Actions）
 
-1. 在 Cloudflare 中进入 `Workers & Pages`。
-2. 新建一个 `Pages` 项目。
-3. 选择 `Direct Upload`。
-4. 上传当前目录中的文件。
-5. 部署成功后，把自定义域名绑定到 `bsdnme.me`。
+仓库里已有 `.github/workflows/deploy-pages.yml`。**push 到 `main` 分支会自动触发部署**，只需把 Cloudflare 凭证存在 GitHub Secrets 里即可：
 
-如果你使用 Wrangler：
+- `CLOUDFLARE_API_TOKEN`：一个**不带 IP/地区限制**的 token（Account → Cloudflare Pages → Edit）。
+- `CLOUDFLARE_ACCOUNT_ID`：你的 Cloudflare 账号 ID。
+
+工作流只会部署公开站点文件（`index.html` / `styles.css` / `script.js` / `assets/`），不会把 `.env.deploy`、`deploy.sh`、`.github/` 等带上线。
+
+### 备选：本机一键部署
 
 ```bash
-npx wrangler pages deploy . --project-name bsdnme-home
+./deploy.sh
 ```
 
-部署成功后，再到 `Pages` 项目里添加自定义域名 `bsdnme.me`。
+脚本从 `.env.deploy` 读取凭证，**只上传公开站点文件**，绝不把含机密的文件带上线。默认走本机代理 `http://127.0.0.1:7890`（可在 `.env.deploy` 改 `DEPLOY_PROXY`；token 无地区限制时其实可省略代理）。
 
-> 仓库内已配置 GitHub Actions 自动部署（`.github/workflows/deploy-pages.yml`），推送到 `main` 分支即可。
+## 配置说明
+
+- **代理**：确保本机代理在运行（脚本默认连 `127.0.0.1:7890`）。这是 token 能认证的前提。
+- **凭证**：`.env.deploy` 已通过 `.gitignore` 排除，不会被 git 提交。
+
+## 安全提醒
+
+`.env.deploy` 里是敏感 token，请勿提交、勿外传。若曾泄露（例如被公网访问到），建议**立即在 Cloudflare 后台吊销并重新生成**。

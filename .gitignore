@@ -9,3 +9,6 @@ Pods/
 .playwright-mcp/
 .DS_Store
 .wrangler/
+
+# 本地部署凭证(含 token, 勿提交)
+.env.deploy

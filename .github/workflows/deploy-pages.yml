@@ -15,9 +15,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Stage public files
+        run: |
+          mkdir -p dist
+          cp index.html styles.css script.js dist/
+          if [ -d assets ] && [ -n "$(ls -A assets 2>/dev/null)" ]; then
+            cp -r assets dist/
+          fi
+          echo "Files to deploy:"
+          find dist -type f
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=my-site --branch=main
+          command: pages deploy dist --project-name=my-site --branch=main
