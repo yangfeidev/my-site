@@ -265,8 +265,8 @@ main {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
-  gap: 40px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.78fr);
+  gap: 32px;
   align-items: center;
   padding: 72px 48px;
   margin-top: 28px;
@@ -293,9 +293,11 @@ main {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3rem, 9vw, 5.6rem);
+  font-size: clamp(2.9rem, 6.2vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
+  word-break: keep-all;
+  overflow-wrap: normal;
   background: linear-gradient(135deg, var(--text), var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
@@ -345,6 +347,35 @@ main {
   }
 }
 
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-highlight {
+  padding: 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero-highlight-title {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.hero-highlight p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 .hero-actions {
   display: flex;
   gap: 16px;
@@ -380,7 +411,7 @@ main {
 /* Hero profile card */
 .hero-card {
   position: relative;
-  padding: 28px;
+  padding: 24px;
   border: 1px solid var(--panel-border);
   border-radius: var(--radius-md);
   background: var(--card);
@@ -424,6 +455,37 @@ main {
   color: var(--muted);
   font-size: 0.98rem;
   line-height: 1.7;
+}
+
+.hero-card-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.hero-card-list li {
+  display: grid;
+  gap: 6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--panel-border);
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.hero-card-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hero-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .hero-card-tags {
@@ -540,6 +602,146 @@ main {
 .fact-list li {
   font-size: 1rem;
   color: var(--text);
+}
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  min-height: 100%;
+}
+
+.project-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 18px 0 12px;
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+.project-copy {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.project-detail-list {
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.project-detail-item {
+  display: grid;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid var(--panel-border);
+}
+
+.project-detail-item dt {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-detail-item dd {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.project-tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 20px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags li {
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--panel-border);
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+/* ==========================================================================
+   Workflow
+   ========================================================================== */
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.workflow-card {
+  padding: 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.workflow-step {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.workflow-card h3 {
+  margin: 18px 0 12px;
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.workflow-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 /* ==========================================================================
@@ -671,6 +873,31 @@ main {
   margin-top: 32px;
 }
 
+.contact-note {
+  margin: 18px 0 0;
+  color: var(--faint);
+  font-size: 0.95rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  padding: 10px 18px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -778,6 +1005,12 @@ main {
     grid-template-columns: 1fr;
     padding: 48px 28px;
   }
+
+  .hero-highlights,
+  .projects-grid,
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 820px) {
@@ -829,6 +1062,8 @@ main {
   }
 
   .about-grid,
+  .projects-grid,
+  .workflow-grid,
   .stack-cols,
   .now-grid {
     grid-template-columns: 1fr;
@@ -850,13 +1085,18 @@ main {
     padding: 40px 22px;
   }
 
+  .hero-highlights {
+    grid-template-columns: 1fr;
+  }
+
   .meta-list {
     flex-direction: column;
     gap: 10px;
   }
 
   .hero-actions,
-  .contact-actions {
+  .contact-actions,
+  .contact-list {
     flex-direction: column;
   }
 

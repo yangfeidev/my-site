@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>巴萨的内马尔 · iOS 开发者</title>
+    <title>巴萨的内马尔 · iOS / 小程序开发者</title>
     <meta
       name="description"
-      content="巴萨的内马尔（bsdnme.me）的个人主页。iOS 开发者，也写微信小程序。这里是我的简介、正在做的事和联系方式。"
+      content="巴萨的内马尔（bsdnme.me）的个人主页。专注 iOS 原生开发、性能优化与微信小程序落地，适合产品从 0 到 1、旧项目迭代与体验打磨。"
     />
     <meta name="theme-color" content="#0b1020" />
     <meta name="color-scheme" content="dark" />
 
     <!-- Social / sharing -->
-    <meta property="og:title" content="巴萨的内马尔 · iOS 开发者" />
+    <meta property="og:title" content="巴萨的内马尔 · iOS / 小程序开发者" />
     <meta
       property="og:description"
-      content="iOS 开发者，也写微信小程序。简介、正在做的事和联系方式。"
+      content="专注 iOS 原生开发、性能优化与微信小程序落地。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
@@ -33,7 +33,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260829" />
   </head>
 
   <body>
@@ -58,8 +58,10 @@
 
         <nav class="nav-links" id="nav-menu" aria-label="主导航">
           <a href="#about">关于</a>
+          <a href="#projects">项目方向</a>
+          <a href="#workflow">合作方式</a>
           <a href="#stack">技术栈</a>
-          <a href="#now">近况</a>
+          <a href="#now">当前专注</a>
           <a href="#contact">联系</a>
         </nav>
       </div>
@@ -72,7 +74,7 @@
           <p class="eyebrow reveal">你好，我是</p>
           <h1 class="reveal">巴萨的内马尔</h1>
           <p class="intro reveal">
-            一名专注 iOS 的开发者，也写微信小程序。擅长用 Swift 打造流畅、精致的原生体验，也能用小程序的轻量把创意快速落地。
+            我做流畅、稳定、细节到位的 iOS App，也能把业务高效落到微信小程序，必要时也可以用 Flutter 推进跨端交付。偏爱原生体验、性能优化和清晰的工程结构，适合从 0 到 1 搭建产品，也适合接手老项目继续做深。
           </p>
 
           <p class="status reveal">
@@ -80,14 +82,29 @@
             目前开放合作，正在接项目
           </p>
 
+          <div class="hero-highlights reveal" aria-label="核心能力">
+            <article class="hero-highlight">
+              <span class="hero-highlight-title">原生体验</span>
+              <p>专注界面细节、交互动效与使用顺手度。</p>
+            </article>
+            <article class="hero-highlight">
+              <span class="hero-highlight-title">性能优化</span>
+              <p>关注启动速度、列表流畅度、复杂页面稳定性。</p>
+            </article>
+            <article class="hero-highlight">
+              <span class="hero-highlight-title">快速落地</span>
+              <p>能把需求拆清楚，稳定推进到上线与迭代。</p>
+            </article>
+          </div>
+
           <div class="hero-actions reveal">
             <a class="button primary" href="mailto:me_damon@sina.cn">联系我</a>
-            <a class="button secondary" href="#stack">看看技术栈</a>
+            <a class="button secondary" href="#projects">看项目方向</a>
           </div>
 
           <ul class="meta-list reveal">
             <li><span class="meta-label">坐标</span>中国 · 郑州</li>
-            <li><span class="meta-label">方向</span>iOS 开发</li>
+            <li><span class="meta-label">方向</span>iOS / 小程序</li>
             <li><span class="meta-label">状态</span>远程 / 兼职合作</li>
           </ul>
         </div>
@@ -97,16 +114,32 @@
             <span class="avatar" aria-hidden="true">N</span>
             <div>
               <p class="hero-card-name">巴萨的内马尔</p>
-              <p class="hero-card-role">iOS Developer</p>
+              <p class="hero-card-role">iOS / 小程序开发者</p>
             </div>
           </div>
           <p class="hero-card-bio">
-            专注打磨细节与性能，把每个界面都做成用起来顺手、看得舒服的体验。
+            我更适合参与这些事情：产品从 0 到 1 的客户端实现、旧项目重构优化，以及需要把体验和交付节奏同时做好的一线业务项目。
           </p>
+          <ul class="hero-card-list">
+            <li>
+              <span class="hero-card-label">适合项目</span>
+              iOS App、业务型小程序、旧项目迭代
+            </li>
+            <li>
+              <span class="hero-card-label">核心关注</span>
+              原生体验、性能稳定、工程可维护
+            </li>
+            <li>
+              <span class="hero-card-label">合作方式</span>
+              需求梳理、开发推进、上线迭代
+            </li>
+          </ul>
           <div class="hero-card-tags">
             <span>Swift</span>
+            <span>SwiftUI</span>
+            <span>Flutter</span>
             <span>微信小程序</span>
-            <span>Objective-C</span>
+            <span>性能优化</span>
           </div>
         </aside>
       </section>
@@ -115,36 +148,225 @@
       <section class="section" id="about">
         <header class="section-head reveal">
           <p class="section-kicker">About</p>
-          <h2>把每个细节，做到用着顺手</h2>
+          <h2>我做的，不只是把功能写出来</h2>
           <p class="section-sub">
-            我从需求与细节出发，偏爱原生体验和开箱即用的性能，把复杂度留在该在的地方。
+            比起堆技术名词，我更在意项目能不能真正交付、能不能顺滑使用、后面接手的人能不能继续维护。
           </p>
         </header>
 
         <div class="about-grid">
           <div class="about-copy reveal">
             <p>
-              我是一位 iOS 开发者，2016 年开始写代码。这些年主要做原生 App（界面、动画、架构、性能优化），也写过不少微信小程序。
+              我从 2016 年开始做移动端开发，长期在 iOS 原生这条线上打磨，也做过不少微信小程序项目。相比单纯把页面做出来，我更关心用户点下去顺不顺、列表滑起来稳不稳、项目后面改起来累不累。
             </p>
             <p>
-              我相信好的体验来自对细节的克制——少一点多余、多一点顺手。技术选型上偏爱 Swift 与系统原生能力，让每一行代码都值得。
+              我的习惯是先把需求拆清楚，再决定哪里该快、哪里该稳、哪里该给未来留空间。技术选型上偏爱 Swift、系统原生能力和可维护的工程结构，不追求炫技，但会把关键细节做扎实。
             </p>
           </div>
 
           <ul class="fact-list reveal">
             <li>
               <span class="fact-title">当前专注</span>
-              iOS App / 小程序
+              iOS App / 小程序交付
             </li>
             <li>
               <span class="fact-title">经验年限</span>
-              10 年（2016 至今）
+              2016 至今，近 10 年
             </li>
             <li>
               <span class="fact-title">工作方式</span>
-              以结果为导向，透明沟通
+              结果导向，透明沟通，稳定推进
+            </li>
+            <li>
+              <span class="fact-title">更适合</span>
+              新项目搭建 / 老项目优化 / 版本迭代
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- ===== Projects ===== -->
+      <section class="section" id="projects">
+        <header class="section-head reveal">
+          <p class="section-kicker">Projects</p>
+          <h2>这些项目，都是我实际写过并长期迭代过的</h2>
+          <p class="section-sub">
+            不放虚构案例，直接把我做过的项目摆出来。覆盖用户端、商户端和小程序，也更能说明我适合什么样的业务场景。
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <span class="project-label">01 · iOS App</span>
+            <h3>酒便利</h3>
+            <p class="project-copy">
+              面向用户端的 iOS 业务应用，长期参与开发与迭代，覆盖核心页面、交互体验和日常版本推进。
+            </p>
+            <dl class="project-detail-list">
+              <div class="project-detail-item">
+                <dt>项目类型</dt>
+                <dd>iOS 用户端业务 App</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>我负责</dt>
+                <dd>页面实现、交互细节、功能迭代与日常优化</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>体现能力</dt>
+                <dd>原生体验打磨、业务流程承接、长期版本维护</dd>
+              </div>
+            </dl>
+            <ul class="project-tags">
+              <li>用户端</li>
+              <li>iOS</li>
+              <li>持续迭代</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="project-label">02 · iOS App</span>
+            <h3>便易商 E3</h3>
+            <p class="project-copy">
+              面向商家或业务侧的 iOS 项目，强调效率、流程和复杂业务场景下的稳定交付。
+            </p>
+            <dl class="project-detail-list">
+              <div class="project-detail-item">
+                <dt>项目类型</dt>
+                <dd>iOS 商业业务项目</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>我负责</dt>
+                <dd>业务页面实现、流程联动、版本迭代与问题处理</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>体现能力</dt>
+                <dd>复杂业务承接、结构梳理、稳定推进交付</dd>
+              </div>
+            </dl>
+            <ul class="project-tags">
+              <li>业务侧</li>
+              <li>iOS</li>
+              <li>流程联动</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="project-label">03 · iOS App</span>
+            <h3>酒快到</h3>
+            <p class="project-copy">
+              面向用户侧的酒类即时业务项目，注重下单链路、页面体验和业务功能的持续打磨。
+            </p>
+            <dl class="project-detail-list">
+              <div class="project-detail-item">
+                <dt>项目类型</dt>
+                <dd>iOS 用户端业务 App</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>我负责</dt>
+                <dd>业务页面、流程实现、体验优化与版本推进</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>体现能力</dt>
+                <dd>用户链路打磨、页面效率、业务功能落地</dd>
+              </div>
+            </dl>
+            <ul class="project-tags">
+              <li>用户端</li>
+              <li>iOS</li>
+              <li>业务交付</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="project-label">04 · 商户端</span>
+            <h3>酒快到商户端</h3>
+            <p class="project-copy">
+              面向商户使用场景的业务客户端，偏重订单、门店、经营流程等更贴近业务执行侧的能力。
+            </p>
+            <dl class="project-detail-list">
+              <div class="project-detail-item">
+                <dt>项目类型</dt>
+                <dd>iOS 商户端应用</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>我负责</dt>
+                <dd>核心页面开发、业务流程承接、日常迭代与优化</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>体现能力</dt>
+                <dd>商户侧业务理解、复杂流程实现、稳定维护</dd>
+              </div>
+            </dl>
+            <ul class="project-tags">
+              <li>商户端</li>
+              <li>iOS</li>
+              <li>流程复杂</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="project-label">05 · 小程序</span>
+            <h3>酒快到小程序</h3>
+            <p class="project-copy">
+              同一业务在线上轻量场景的延展，通过小程序承接页面、流程和快速上线需求。
+            </p>
+            <dl class="project-detail-list">
+              <div class="project-detail-item">
+                <dt>项目类型</dt>
+                <dd>微信小程序业务端</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>我负责</dt>
+                <dd>页面实现、流程联动、组件复用与线上交付</dd>
+              </div>
+              <div class="project-detail-item">
+                <dt>体现能力</dt>
+                <dd>多端业务协同、快速落地、小程序体验打磨</dd>
+              </div>
+            </dl>
+            <ul class="project-tags">
+              <li>微信小程序</li>
+              <li>快速上线</li>
+              <li>多端协同</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Workflow ===== -->
+      <section class="section" id="workflow">
+        <header class="section-head reveal">
+          <p class="section-kicker">Workflow</p>
+          <h2>我通常这样推进一个项目</h2>
+          <p class="section-sub">
+            我不喜欢一上来就闷头写代码。先把需求和边界说清楚，再推进实现、体验和上线，整体节奏会更稳。
+          </p>
+        </header>
+
+        <div class="workflow-grid">
+          <article class="workflow-card reveal">
+            <span class="workflow-step">Step 1</span>
+            <h3>先把需求和优先级说清楚</h3>
+            <p>先明确这版到底要解决什么问题，哪些是必须做，哪些可以后放，避免项目一开始就发散。</p>
+          </article>
+
+          <article class="workflow-card reveal">
+            <span class="workflow-step">Step 2</span>
+            <h3>再把结构和关键页面搭稳</h3>
+            <p>优先把核心流程、页面骨架和工程结构立住，保证后续迭代不是一边做一边返工。</p>
+          </article>
+
+          <article class="workflow-card reveal">
+            <span class="workflow-step">Step 3</span>
+            <h3>然后收口交互、性能和细节</h3>
+            <p>在功能闭环之后重点处理体验顺手度、页面流畅度和复杂场景的稳定性。</p>
+          </article>
+
+          <article class="workflow-card reveal">
+            <span class="workflow-step">Step 4</span>
+            <h3>最后配合上线和后续迭代</h3>
+            <p>把版本上线、问题修正和下一阶段迭代连起来，而不是做完一版就直接断开。</p>
+          </article>
         </div>
       </section>
 
@@ -154,7 +376,7 @@
           <p class="section-kicker">Stack</p>
           <h2>我常用的技术</h2>
           <p class="section-sub">
-            这些都是我手最熟、也最信任的工具，用它，意味着稳、快、少踩坑。
+            技术栈对我来说不是拿来堆名词的，而是为了让项目交付更稳、迭代更顺、问题更容易收口。
           </p>
         </header>
 
@@ -164,6 +386,7 @@
             <div class="pill-group">
               <span class="pill">Swift</span>
               <span class="pill">Objective-C</span>
+                <span class="pill">Flutter</span>
               <span class="pill">Git</span>
             </div>
           </div>
@@ -182,6 +405,7 @@
             <h3>小程序 / 工程</h3>
             <div class="pill-group">
               <span class="pill">微信小程序</span>
+                <span class="pill">Flutter</span>
               <span class="pill">uni-app</span>
               <span class="pill">Xcode</span>
               <span class="pill">Instruments</span>
@@ -194,24 +418,27 @@
       <section class="section" id="now">
         <header class="section-head reveal">
           <p class="section-kicker">Now</p>
-          <h2>最近在做什么</h2>
+          <h2>我当前正在打磨的能力</h2>
+          <p class="section-sub">
+            这些是我最近投入时间最多、也最希望持续做深的方向，它们会直接影响项目的最终使用体验。
+          </p>
         </header>
 
         <div class="now-grid">
           <article class="now-card reveal">
-            <span class="now-icon" aria-hidden="true">✍️</span>
-            <h3>写博客</h3>
-            <p>想聊聊 Swift、原生动画，以及小程序里那些省心好用的实践。</p>
+            <span class="now-icon" aria-hidden="true">✨</span>
+            <h3>原生动效与细节体验</h3>
+            <p>继续打磨页面层级、转场反馈和操作节奏，让产品用起来更顺、更自然。</p>
           </article>
           <article class="now-card reveal">
-            <span class="now-icon" aria-hidden="true">🧩</span>
-            <h3>开源</h3>
-            <p>在维护一些小而美的 Swift 组件与工程模板，追求简洁好用。</p>
+            <span class="now-icon" aria-hidden="true">⚡</span>
+            <h3>性能优化与稳定性</h3>
+            <p>重点关注启动、滚动、复杂页面卡顿和线上问题收口，让项目越迭代越稳。</p>
           </article>
           <article class="now-card reveal">
-            <span class="now-icon" aria-hidden="true">🤝</span>
-            <h3>接项目</h3>
-            <p>开放 iOS App 与小程序开发合作，从需求到上架一站式服务。</p>
+            <span class="now-icon" aria-hidden="true">🧱</span>
+            <h3>工程结构与交付节奏</h3>
+            <p>把项目拆得更清晰、协作更顺畅，让新功能上线和后续维护都更可控。</p>
           </article>
         </div>
       </section>
@@ -220,16 +447,24 @@
       <section class="section contact" id="contact">
         <div class="contact-inner reveal">
           <p class="section-kicker">Contact</p>
-          <h2>想聊聊？给我发封邮件</h2>
+          <h2>如果你正要做 iOS App，或者想把旧项目做得更顺手</h2>
           <p class="section-sub">
-            无论是 iOS 项目、小程序合作，还是单纯打个招呼，我都乐意回复。
+            适合来找我的事情包括：iOS 原生开发、旧项目重构优化、版本迭代支持，以及微信小程序业务落地。只要方向对，我都愿意聊。
           </p>
 
           <div class="contact-actions">
             <a class="button primary large" href="mailto:me_damon@sina.cn">
-              me_damon@sina.cn
+              发邮件给我
             </a>
           </div>
+
+          <p class="contact-note">也可以直接发到：me_damon@sina.cn</p>
+
+          <ul class="contact-list">
+            <li>iOS App 从 0 到 1</li>
+            <li>旧项目性能优化 / 结构收口</li>
+            <li>微信小程序页面与流程落地</li>
+          </ul>
 
           <div class="social-links">
             <a href="mailto:me_damon@sina.cn">Email</a>
@@ -241,9 +476,9 @@
 
     <footer class="site-footer">
       <p>© <span id="year">2026</span> 巴萨的内马尔 · bsdnme.me</p>
-      <p class="footer-note">Built with ♥ on Cloudflare Pages</p>
+      <p class="footer-note">部署于 Cloudflare Pages</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260829"></script>
   </body>
 </html>
