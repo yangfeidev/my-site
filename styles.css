@@ -361,6 +361,13 @@ main {
   background: rgba(255, 255, 255, 0.03);
 }
 
+.hero-highlight-featured {
+  background:
+    linear-gradient(180deg, rgba(123, 92, 255, 0.12), rgba(123, 92, 255, 0.03)),
+    rgba(255, 255, 255, 0.03);
+  border-color: rgba(123, 92, 255, 0.28);
+}
+
 .hero-highlight-title {
   display: inline-block;
   margin-bottom: 8px;
@@ -504,6 +511,12 @@ main {
   font-weight: 500;
 }
 
+.hero-card-tags .tag-strong {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #08101f;
+  box-shadow: 0 10px 24px rgba(110, 155, 255, 0.22);
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -605,6 +618,86 @@ main {
 }
 
 /* ==========================================================================
+   Platforms
+   ========================================================================== */
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.platform-card {
+  padding: 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.platform-card-featured {
+  border-color: rgba(123, 92, 255, 0.34);
+  background:
+    radial-gradient(240px 160px at 100% 0%, rgba(123, 92, 255, 0.18), transparent 75%),
+    linear-gradient(180deg, rgba(123, 92, 255, 0.1), rgba(255, 255, 255, 0.02)),
+    var(--card);
+  box-shadow: 0 16px 36px rgba(64, 44, 140, 0.22);
+}
+
+.platform-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(123, 92, 255, 0.14);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.platform-card h3 {
+  margin: 18px 0 12px;
+  font-size: 1.18rem;
+}
+
+.platform-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.platform-points {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.platform-points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.platform-points li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 5px var(--primary-soft);
+}
+
+/* ==========================================================================
    Projects
    ========================================================================== */
 
@@ -612,6 +705,35 @@ main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+}
+
+.projects-grid-double {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.projects-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-group + .project-group {
+  margin-top: 28px;
+}
+
+.project-group-head {
+  margin-bottom: 16px;
+}
+
+.project-group-title {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.project-group-copy {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .project-card {
@@ -783,6 +905,12 @@ main {
   font-size: 0.86rem;
   font-weight: 500;
   transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.pill-strong {
+  border-color: rgba(123, 92, 255, 0.3);
+  background: linear-gradient(135deg, rgba(123, 92, 255, 0.22), rgba(110, 155, 255, 0.12));
+  color: #b9cfff;
 }
 
 .pill:hover {
@@ -1006,6 +1134,7 @@ main {
     padding: 48px 28px;
   }
 
+  .platform-grid,
   .hero-highlights,
   .projects-grid,
   .workflow-grid {
@@ -1062,6 +1191,7 @@ main {
   }
 
   .about-grid,
+  .platform-grid,
   .projects-grid,
   .workflow-grid,
   .stack-cols,
@@ -1083,6 +1213,10 @@ main {
 @media (max-width: 480px) {
   .hero {
     padding: 40px 22px;
+  }
+
+  .platform-card-featured {
+    box-shadow: var(--shadow-sm);
   }
 
   .hero-highlights {
